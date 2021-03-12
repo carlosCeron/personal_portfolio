@@ -1,4 +1,10 @@
-<h1>Listado de proyectos</h1>
+<h1>Nick's Portfolio</h1>
+
+{% load static %}
+
+<a href="{% static 'portfolio/resume.pdf' %}" target="_blank">Resume</a>
+
+<img src="{% static 'portfolio/SquareBlonde.jpg' %}" alt="SquareBlonde">
 
 {% for project in projects %}
     <h5>{{ project.title }}</h5>

@@ -1,7 +1,7 @@
 <h1>Listado de blogs</h1>
 
 {% for blog in blogs %}
-    <h2>{{ blog.title }}</h2>
+    <h2><a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a> </h2>
     <h4>{{ blog.date }}</h4>
     <p>{{ blog.description }}</p>
 {% endfor %}
