@@ -2,6 +2,6 @@
 
 {% for blog in blogs %}
     <h2><a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a> </h2>
-    <h4>{{ blog.date }}</h4>
+    <h4>{{ blog.date | date:'M d Y' }}</h4>
     <p>{{ blog.description }}</p>
 {% endfor %}
